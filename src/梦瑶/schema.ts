@@ -38,7 +38,7 @@ export const Schema = z.object({
   }).prefault({}),
   妹妹: z.object({
     关系张力: z.coerce.number().transform(v => _.clamp(v, 0, 100)).prefault(30),
-    当前安排: z.string().prefault("教哥哥用相机"),
+    当前安排: z.string().prefault("给哥哥排第一单腿部写真"),
   }).prefault({}),
   暗线: z.object({
     妹妹真心: z.coerce.number().transform(v => _.clamp(v, 0, 100)).prefault(15),
