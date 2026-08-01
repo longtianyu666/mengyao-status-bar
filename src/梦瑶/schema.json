@@ -165,7 +165,7 @@
           "type": "number"
         },
         "当前安排": {
-          "default": "教哥哥用相机",
+          "default": "给哥哥排第一单腿部写真",
           "type": "string"
         }
       }
