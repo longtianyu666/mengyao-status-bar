@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "当前时间": {
+      "default": "2026/08/01-23:40",
+      "type": "string"
+    },
+    "当前场景": {
+      "default": "出租屋·客厅",
+      "type": "string"
+    },
+    "当前阶段": {
+      "default": "起步期",
+      "type": "string",
+      "enum": [
+        "起步期",
+        "上道期",
+        "沉溺期",
+        "抉择期"
+      ]
+    },
+    "近期事件": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "资金": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "当前余额": {
+          "default": 860,
+          "type": "number"
+        },
+        "目标金额": {
+          "default": 120000,
+          "type": "number"
+        },
+        "营业尺度": {
+          "default": 1,
+          "type": "number"
+        }
+      }
+    },
+    "营业": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "粉丝数": {
+          "default": 0,
+          "type": "number"
+        },
+        "当前客户": {
+          "default": "无",
+          "type": "string"
+        },
+        "日程": {
+          "default": "无",
+          "type": "string"
+        },
+        "直播状态": {
+          "default": "未开播",
+          "type": "string"
+        }
+      }
+    },
+    "哥哥": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "剩余底片": {
+          "default": 11,
+          "type": "number"
+        },
+        "已拼部位": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "眼型": {
+              "default": 0,
+              "type": "number"
+            },
+            "眉骨": {
+              "default": 0,
+              "type": "number"
+            },
+            "鼻型": {
+              "default": 0,
+              "type": "number"
+            },
+            "唇形": {
+              "default": 0,
+              "type": "number"
+            },
+            "脸型轮廓": {
+              "default": 0,
+              "type": "number"
+            },
+            "声线": {
+              "default": 1,
+              "type": "number"
+            },
+            "肤质": {
+              "default": 0,
+              "type": "number"
+            },
+            "发型": {
+              "default": 0,
+              "type": "number"
+            },
+            "胸部": {
+              "default": 0,
+              "type": "number"
+            },
+            "腰臀": {
+              "default": 0,
+              "type": "number"
+            },
+            "双腿": {
+              "default": 0,
+              "type": "number"
+            },
+            "下体": {
+              "default": 0,
+              "type": "number"
+            }
+          }
+        },
+        "下体解锁状态": {
+          "default": "未解锁",
+          "type": "string",
+          "enum": [
+            "未解锁",
+            "已适配",
+            "已拼"
+          ]
+        },
+        "拼身完整度": {
+          "default": 8,
+          "type": "number"
+        },
+        "雌堕度": {
+          "default": 5,
+          "type": "number"
+        },
+        "心理状态": {
+          "default": "抗拒",
+          "type": "string"
+        },
+        "暴露风险": {
+          "default": 5,
+          "type": "number"
+        }
+      }
+    },
+    "妹妹": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "关系张力": {
+          "default": 30,
+          "type": "number"
+        },
+        "当前安排": {
+          "default": "教哥哥用相机",
+          "type": "string"
+        }
+      }
+    },
+    "暗线": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "妹妹真心": {
+          "default": 15,
+          "type": "number"
+        },
+        "妹妹占有度": {
+          "default": 20,
+          "type": "number"
+        },
+        "债主威胁": {
+          "default": 20,
+          "type": "number"
+        },
+        "熟人怀疑": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "黑料底牌": {
+          "default": "无",
+          "type": "string"
+        },
+        "结局倾向": {
+          "default": "未定",
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+export const Schema = z.object({
+  当前时间: z.string().prefault("2026/08/01-23:40"),
+  当前场景: z.string().prefault("出租屋·客厅"),
+  当前阶段: z.enum(["起步期", "上道期", "沉溺期", "抉择期"]).prefault("起步期"),
+  近期事件: z.array(z.string()).prefault([]),
+  资金: z.object({
+    当前余额: z.coerce.number().transform(v => _.clamp(v, 0, 999999)).prefault(860),
+    目标金额: z.coerce.number().transform(v => _.clamp(v, 0, 999999)).prefault(120000),
+    营业尺度: z.coerce.number().transform(v => _.clamp(v, 0, 5)).prefault(1),
+  }).prefault({}),
+  营业: z.object({
+    粉丝数: z.coerce.number().transform(v => _.clamp(v, 0, 999999)).prefault(0),
+    当前客户: z.string().prefault("无"),
+    日程: z.string().prefault("无"),
+    直播状态: z.string().prefault("未开播"),
+  }).prefault({}),
+  哥哥: z.object({
+    剩余底片: z.coerce.number().transform(v => _.clamp(v, 0, 12)).prefault(11),
+    已拼部位: z.object({
+      眼型: z.coerce.number().transform(v => _.clamp(v, 0, 1)).prefault(0),
+      眉骨: z.coerce.number().transform(v => _.clamp(v, 0, 1)).prefault(0),
+      鼻型: z.coerce.number().transform(v => _.clamp(v, 0, 1)).prefault(0),
+      唇形: z.coerce.number().transform(v => _.clamp(v, 0, 1)).prefault(0),
+      脸型轮廓: z.coerce.number().transform(v => _.clamp(v, 0, 1)).prefault(0),
+      声线: z.coerce.number().transform(v => _.clamp(v, 0, 1)).prefault(1),
+      肤质: z.coerce.number().transform(v => _.clamp(v, 0, 1)).prefault(0),
+      发型: z.coerce.number().transform(v => _.clamp(v, 0, 1)).prefault(0),
+      胸部: z.coerce.number().transform(v => _.clamp(v, 0, 1)).prefault(0),
+      腰臀: z.coerce.number().transform(v => _.clamp(v, 0, 1)).prefault(0),
+      双腿: z.coerce.number().transform(v => _.clamp(v, 0, 1)).prefault(0),
+      下体: z.coerce.number().transform(v => _.clamp(v, 0, 1)).prefault(0),
+    }).prefault({}),
+    下体解锁状态: z.enum(["未解锁", "已适配", "已拼"]).prefault("未解锁"),
+    拼身完整度: z.coerce.number().transform(v => _.clamp(v, 0, 100)).prefault(8),
+    雌堕度: z.coerce.number().transform(v => _.clamp(v, 0, 100)).prefault(5),
+    心理状态: z.string().prefault("抗拒"),
+    暴露风险: z.coerce.number().transform(v => _.clamp(v, 0, 100)).prefault(5),
+  }).prefault({}),
+  妹妹: z.object({
+    关系张力: z.coerce.number().transform(v => _.clamp(v, 0, 100)).prefault(30),
+    当前安排: z.string().prefault("教哥哥用相机"),
+  }).prefault({}),
+  暗线: z.object({
+    妹妹真心: z.coerce.number().transform(v => _.clamp(v, 0, 100)).prefault(15),
+    妹妹占有度: z.coerce.number().transform(v => _.clamp(v, 0, 100)).prefault(20),
+    债主威胁: z.coerce.number().transform(v => _.clamp(v, 0, 100)).prefault(20),
+    熟人怀疑: z.array(z.string()).prefault([]),
+    黑料底牌: z.string().prefault("无"),
+    结局倾向: z.string().prefault("未定"),
+  }).prefault({}),
+});
+export type Schema = z.output<typeof Schema>;
