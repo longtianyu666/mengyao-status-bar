@@ -3,7 +3,7 @@ import { computed } from 'vue';
 import { useDataStore } from '../store';
 
 const store = useDataStore();
-const data = computed(() => store.data.value);
+const data = computed(() => store.data);
 
 const remaining = computed(() => data.value?.哥哥?.剩余底片 ?? 0);
 const usedCount = computed(() => 12 - remaining.value);

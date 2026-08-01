@@ -3,7 +3,7 @@ import { computed } from 'vue';
 import { useDataStore } from '../store';
 
 const store = useDataStore();
-const data = computed(() => store.data.value);
+const data = computed(() => store.data);
 
 const faceParts = [
   { key: '眼型', icon: 'fa-eye' },

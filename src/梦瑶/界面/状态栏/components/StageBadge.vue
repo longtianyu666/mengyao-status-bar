@@ -3,7 +3,7 @@ import { computed } from 'vue';
 import { useDataStore } from '../store';
 
 const store = useDataStore();
-const data = computed(() => store.data.value);
+const data = computed(() => store.data);
 
 type Stage = '起步期' | '上道期' | '沉溺期' | '抉择期';
 const STAGES: Stage[] = ['起步期', '上道期', '沉溺期', '抉择期'];

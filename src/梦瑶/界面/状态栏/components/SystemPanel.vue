@@ -4,7 +4,7 @@ import { useDataStore } from '../store';
 import StageBadge from './StageBadge.vue';
 
 const store = useDataStore();
-const data = computed(() => store.data.value);
+const data = computed(() => store.data);
 
 const events = computed(() => data.value?.近期事件 ?? []);
 const tension = computed(() => data.value?.妹妹?.关系张力 ?? 0);

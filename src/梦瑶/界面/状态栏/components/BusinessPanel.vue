@@ -3,7 +3,7 @@ import { computed } from 'vue';
 import { useDataStore } from '../store';
 
 const store = useDataStore();
-const data = computed(() => store.data.value);
+const data = computed(() => store.data);
 
 const level = computed(() => data.value?.资金?.营业尺度 ?? 0);
 const levelDots = [1, 2, 3, 4, 5];

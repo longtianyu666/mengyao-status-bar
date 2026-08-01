@@ -8,7 +8,7 @@ import BusinessPanel from './components/BusinessPanel.vue';
 import ProgressBar from './components/ProgressBar.vue';
 
 const store = useDataStore();
-const data = computed(() => store.data.value);
+const data = computed(() => store.data);
 </script>
 
 <template>

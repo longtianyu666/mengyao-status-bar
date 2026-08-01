@@ -1,5 +1,10 @@
 import { StoreDefinition } from 'pinia';
 
+function getStatData(variable_option: VariableOption): Record<string, unknown> {
+  const stat_data = _.get(getVariables(variable_option), 'stat_data', {});
+  return _.isPlainObject(stat_data) ? stat_data : {};
+}
+
 export function defineMvuDataStore<T extends z.ZodObject>(
   schema: T,
   variable_option: VariableOption,
@@ -20,14 +25,14 @@ export function defineMvuDataStore<T extends z.ZodObject>(
       .join('.')}`,
     errorCatched(() => {
       const data = ref(
-        schema.parse(_.get(getVariables(variable_option), 'stat_data', {}) ?? {}, { reportInput: true }),
+        schema.parse(getStatData(variable_option), { reportInput: true }),
       ) as Ref<z.infer<T>>;
       if (additional_setup) {
         additional_setup(data);
       }
 
       useIntervalFn(() => {
-        const stat_data = _.get(getVariables(variable_option), 'stat_data', {}) ?? {};
+        const stat_data = getStatData(variable_option);
         const result = schema.safeParse(stat_data);
         if (result.error) {
           return;
