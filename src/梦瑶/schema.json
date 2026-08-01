@@ -36,7 +36,7 @@
           "type": "number"
         },
         "目标金额": {
-          "default": 120000,
+          "default": 500000,
           "type": "number"
         },
         "营业尺度": {
@@ -100,7 +100,7 @@
               "type": "number"
             },
             "声线": {
-              "default": 1,
+              "default": 0,
               "type": "number"
             },
             "肤质": {
@@ -120,7 +120,7 @@
               "type": "number"
             },
             "双腿": {
-              "default": 0,
+              "default": 1,
               "type": "number"
             },
             "下体": {
@@ -151,7 +151,7 @@
           "type": "string"
         },
         "暴露风险": {
-          "default": 5,
+          "default": 8,
           "type": "number"
         }
       }
