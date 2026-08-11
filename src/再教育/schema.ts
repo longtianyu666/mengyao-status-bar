@@ -3,6 +3,7 @@ export const Schema = z.object({
   沉沦程度: z.coerce.number().min(0).max(100).prefault(0),
   羞耻阈值: z.coerce.number().min(0).max(100).prefault(80),
   当前场景: z.string().prefault("天音宅"),
+  _当前视角: z.enum(["森夏视角", "雪乃视角"]).prefault("森夏视角"),
   雪乃不满度: z.coerce.number().min(0).max(100).prefault(0),
   雪乃调教强度: z.coerce.number().min(0).max(100).prefault(10),
   雪乃当前惩罚: z.string().prefault("无"),

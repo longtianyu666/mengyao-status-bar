@@ -1,13 +1,11 @@
 <script setup lang="ts">
 import { computed } from 'vue';
+import { useDataStore } from '../store';
 
+const store = useDataStore();
+const data = computed(() => store.data);
 const isYukino = computed(() => {
-  try {
-    const msgs = getChatMessages(getCurrentMessageId()) as { message?: string }[];
-    return (msgs[0]?.message ?? '').includes('你扮演天音雪乃');
-  } catch {
-    return false;
-  }
+  return data.value?._当前视角 === '雪乃视角';
 });
 </script>
 

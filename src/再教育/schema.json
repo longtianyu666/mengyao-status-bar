@@ -24,6 +24,14 @@
       "default": "天音宅",
       "type": "string"
     },
+    "_当前视角": {
+      "default": "森夏视角",
+      "type": "string",
+      "enum": [
+        "森夏视角",
+        "雪乃视角"
+      ]
+    },
     "雪乃不满度": {
       "default": 0,
       "type": "number",
