@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "女性化程度": {
+      "default": 0,
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "沉沦程度": {
+      "default": 0,
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "羞耻阈值": {
+      "default": 80,
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "当前场景": {
+      "default": "天音宅",
+      "type": "string"
+    },
+    "雪乃不满度": {
+      "default": 0,
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "雪乃调教强度": {
+      "default": 10,
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "雪乃当前惩罚": {
+      "default": "无",
+      "type": "string"
+    },
+    "$药物累积量": {
+      "default": 5,
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    }
+  }
+}

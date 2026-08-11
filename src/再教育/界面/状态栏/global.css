@@ -1,0 +1,257 @@
+@import url('https://testingcf.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css');
+
+:root {
+  --c-bg: #1a1025;
+  --c-surface: #201832;
+  --c-surface-alt: #2a2040;
+  --c-border: rgba(203, 166, 247, 0.16);
+  --c-text: #cdd6f4;
+  --c-text-muted: #a6adc8;
+  --c-fem: #f5c2e7;
+  --c-sink: #b4befe;
+  --c-shame: #fab387;
+  --c-anger: #f38ba8;
+  --c-power: #cba6f7;
+  --c-ok: #a6e3a1;
+  --c-warn: #f9e2af;
+  --radius: 12px;
+  --gap: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.status-bar {
+  width: 100%;
+  margin: 6px 0;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: linear-gradient(160deg, var(--c-bg) 0%, #1e1836 40%, #16213e 100%);
+  border: 1px solid var(--c-border);
+  color: var(--c-text);
+  font-family: 'Sarasa Gothic SC', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.sb-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.sb-scene {
+  flex: 1;
+  color: var(--c-text);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.persp {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.mode-morika {
+  color: var(--c-fem);
+  border-color: var(--c-fem);
+  background: rgba(245, 194, 231, 0.12);
+}
+
+.mode-yukino {
+  color: var(--c-anger);
+  border-color: var(--c-anger);
+  background: rgba(243, 139, 168, 0.14);
+}
+
+.stage-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.stage-early {
+  color: var(--c-sink);
+  border-color: var(--c-sink);
+  background: rgba(180, 190, 254, 0.12);
+}
+
+.stage-mid {
+  color: var(--c-warn);
+  border-color: var(--c-warn);
+  background: rgba(249, 226, 175, 0.12);
+}
+
+.stage-deep {
+  color: var(--c-fem);
+  border-color: var(--c-fem);
+  background: rgba(245, 194, 231, 0.12);
+}
+
+.stage-final {
+  color: var(--c-anger);
+  border-color: var(--c-anger);
+  background: rgba(243, 139, 168, 0.14);
+}
+
+.sb-bars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  padding: 10px 0;
+}
+
+.progress-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.progress-label {
+  color: var(--c-text-muted);
+}
+
+.progress-label i {
+  margin-right: 5px;
+  width: 14px;
+  text-align: center;
+}
+
+.progress-val {
+  color: var(--c-text);
+  font-weight: 700;
+}
+
+.progress-val em {
+  font-style: normal;
+  color: var(--c-text-muted);
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.progress-track {
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+.tone-fem {
+  background: linear-gradient(90deg, var(--c-fem), #f38ba8);
+}
+
+.tone-sink {
+  background: linear-gradient(90deg, var(--c-sink), #f38ba8);
+}
+
+.tone-shame {
+  background: linear-gradient(90deg, var(--c-shame), var(--c-ok));
+}
+
+.sb-yukino {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  margin: 0 -12px -10px;
+  background: rgba(235, 160, 172, 0.06);
+  border-top: 1px solid rgba(235, 160, 172, 0.1);
+  flex-wrap: wrap;
+}
+
+.yn-name {
+  color: var(--c-anger);
+  font-weight: 700;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.yn-name i {
+  margin-right: 4px;
+}
+
+.yn-punish {
+  color: var(--c-anger);
+  font-weight: 700;
+  font-size: 12px;
+  min-width: 48px;
+  white-space: nowrap;
+}
+
+.yn-bar {
+  flex: 1;
+  min-width: 110px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.yn-label {
+  font-size: 10px;
+  color: var(--c-text-muted);
+  white-space: nowrap;
+}
+
+.yn-track {
+  flex: 1;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.yn-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.yn-fill.anger {
+  background: linear-gradient(90deg, var(--c-anger), #e64553);
+}
+
+.yn-fill.power {
+  background: linear-gradient(90deg, var(--c-power), #8839ef);
+}
+
+.yn-val {
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 22px;
+  text-align: right;
+}
+
+@media (max-width: 720px) {
+  .sb-head {
+    flex-wrap: wrap;
+  }
+
+  .sb-scene {
+    order: 3;
+    flex-basis: 100%;
+  }
+}
